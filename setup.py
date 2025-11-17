@@ -1,7 +1,6 @@
 # Here i will generate my code for generating the .egg file for logs
 '''
-This setup.py file really important because for any project that you probably develop you really need to have this setup.py because it is an essential part of packaging and distributing python projects. it is used by setup tools to define the configuration of a project such as this metadata, dependency
-and more.
+This setup.py file really important because for any project that you probably develop you really need to have this setup.py because it is an essential part of packaging and distributing python projects. it is used by setup tools to define the configuration of a project such as this metadata, dependency and more.
 '''
 from setuptools import find_packages,setup
 from typing import List
