@@ -52,7 +52,7 @@ class NetworkDataExtract():
 if __name__=="__main__":
     FILE_PATH = os.path.join("Network_Data/phisingData.csv")
     DATABASE = "NETWORK_SECURITY"
-    Collection = "NetworkData"
+    Collection = "NetworkData" # Table in Database
     networkobj = NetworkDataExtract()
     Records = networkobj.csv_to_json_converter(data_path=FILE_PATH)
     print(Records)
