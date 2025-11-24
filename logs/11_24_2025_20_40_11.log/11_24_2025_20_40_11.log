@@ -1,0 +1,4 @@
+[2025-11-24 20:40:23,985] 14 root  INFO - Initiate the Data Ingestion.
+[2025-11-24 20:40:23,985] 35 root  INFO - Exporting data from mongodb
+[2025-11-24 20:40:24,415] 37 root  INFO - Connected to Mongodb successfully
+[2025-11-24 20:40:27,389] 47 root  INFO - Data exported from Mongodb successfully

@@ -1,0 +1,8 @@
+[2025-11-24 20:57:49,265] 14 root  INFO - Initiate the Data Ingestion.
+[2025-11-24 20:57:49,265] 35 root  INFO - Exporting data from mongodb
+[2025-11-24 20:57:49,641] 37 root  INFO - Connected to Mongodb successfully
+[2025-11-24 20:57:53,186] 47 root  INFO - Data exported from Mongodb successfully
+[2025-11-24 20:57:53,190] 58 root  INFO - Exporting data into feature store
+[2025-11-24 20:57:53,290] 60 root  INFO - Data exported into feature store successfully
+[2025-11-24 20:57:53,292] 76 root  INFO - Splitting data into train and test file
+[2025-11-24 20:57:53,402] 84 root  INFO - Data split into train and test file successfully
