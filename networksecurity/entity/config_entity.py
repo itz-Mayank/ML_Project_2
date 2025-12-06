@@ -43,4 +43,53 @@ class DataIngestionConfig:
         # os.makedirs(os.path.dirname(self.feature_store_file_path),exist_ok=True)
         # os.makedirs(os.path.dirname(self.train_file_path),exist_ok=True)
         # os.makedirs(os.path.dirname(self.test_file_path),exist_ok=True)
+
+class DataValidationConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.data_validation_dir = os.path.join(
+            training_pipeline_config.artifact_dir,
+            training_pipeline.DATA_VALIDATION_DIR_NAME
+        )
+        self.valid_data_dir = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_VALID_DIR
+        )
+        self.invalid_data_dir = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_INVALID_DIR
+        )
         
+        # Valid Data
+        self.valid_train_file_path = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_VALID_DIR,
+            training_pipeline.TRAIN_FILE_NAME
+        )
+        self.valid_test_file_path = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_VALID_DIR,
+            training_pipeline.TEST_FILE_NAME
+        )
+        
+        # Invalid Data
+        self.invalid_train_file_path = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_INVALID_DIR,
+            training_pipeline.TRAIN_FILE_NAME
+        )
+        self.invalid_train_file_path = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_INVALID_DIR,
+            training_pipeline.TEST_FILE_NAME
+        )
+        
+        # Drift Report File Path
+        self.drift_report_file_path = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_DRIFT_REPORT_DIR,
+            training_pipeline.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME
+        )
+        # os.makedirs(self.data_validation_dir,exist_ok=True)
+        # os.makedirs(self.valid_data_dir,exist_ok=True)
+        # os.makedirs(self.invalid_data_dir,exist_ok=True)
+        # os.makedirs(os.path.dirname(self.drift_report_file_path),exist_ok=True)
