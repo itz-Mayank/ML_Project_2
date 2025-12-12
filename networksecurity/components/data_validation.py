@@ -1,6 +1,6 @@
 from networksecurity.entity.artifacts_entity import DataIngestionArtifacts, DataValidationArtifacts
 from networksecurity.entity.config_entity import DataValidationConfig
-from networksecurity.utils.main_utils.utils import read_yaml_file
+from networksecurity.utils.main_utils.utils import read_yaml_file,write_yaml_file
 
 from networksecurity.exception.exception import NetworkSecurityException
 from networksecurity.logging.logger import logging
@@ -59,6 +59,7 @@ class DataValidation:
             # File path
             dir_path = os.path.dirname(drift_report_file_path)
             os.makedirs(dir_path,exist_ok=True)
+            write_yaml_file(file_path=drift_report_file_path,content=report)
         except Exception as e:
             raise NetworkSecurityException(e,sys)
     
@@ -80,6 +81,28 @@ class DataValidation:
             status = self.validate_number_of_columns(dataframe=test_dataframe)
             if not status:
                 error_message=("{error_message} Test data does not contain all columns.\n")
+                
+            # Check Data drift
+            status = self.detect_dataset_drift(base_df=train_dataframe,current_df=test_dataframe)
+            dir_path = os.path.dirname(self.data_validation_config.valid_train_file_path)
+            os.makedirs(dir_path, exist_ok=True)
+            
+            train_dataframe.to_csv(
+                self.data_validation_config.valid_train_file_path, index=False, header=True
+            )
+            
+            test_dataframe.to_csv(
+                self.data_validation_config.valid_test_file_path, index=False, header=True
+            )
+            
+            data_validation_artifacts = DataValidationArtifacts(
+                validation_status=status,
+                valid_train_file_path=self.data_validation_config.valid_train_file_path,
+                valid_test_file_path=self.data_validation_config.valid_test_file_path,
+                invalid_train_file_path=None,
+                invalid_test_file_path=None,
+                drift_report_file_path=self.data_validation_config.drift_report_file_path
+            )
                 
         except Exception as e:
             raise NetworkSecurityException(e,sys)
