@@ -1,0 +1,12 @@
+[2025-12-12 22:58:29,030] 15 root  INFO - Initiate the Data Ingestion.
+[2025-12-12 22:58:29,030] 35 root  INFO - Exporting data from mongodb
+[2025-12-12 22:58:29,172] 37 root  INFO - Connected to Mongodb successfully
+[2025-12-12 22:58:33,076] 47 root  INFO - Data exported from Mongodb successfully
+[2025-12-12 22:58:33,078] 58 root  INFO - Exporting data into feature store
+[2025-12-12 22:58:33,198] 60 root  INFO - Data exported into feature store successfully
+[2025-12-12 22:58:33,200] 76 root  INFO - Splitting data into train and test file
+[2025-12-12 22:58:33,324] 84 root  INFO - Data split into train and test file successfully
+[2025-12-12 22:58:33,325] 17 root  INFO - Data Ingestion completed.
+[2025-12-12 22:58:33,346] 21 root  INFO - Initiate the Data Validation.
+[2025-12-12 22:58:33,468] 31 root  INFO - Number of columns in data is : {number_of_columns}
+[2025-12-12 22:58:33,468] 32 root  INFO - Dataframe has { len(dataframe.columns) } columns
