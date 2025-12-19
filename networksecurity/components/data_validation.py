@@ -21,16 +21,16 @@ class DataValidation:
     @staticmethod
     def read_data(file_path)->pd.DataFrame:
         try:
-            pd.read_csv(file_path)
+            return pd.read_csv(file_path)
         except Exception as e:
             raise NetworkSecurityException(e,sys)
         
     def validate_number_of_columns(self,dataframe:pd.DataFrame)->bool:
         try:
             number_of_columns = len(self._schema_config)
-            logging.info("Number of columns in data is : {number_of_columns}")
-            logging.info("Dataframe has { len(dataframe.columns) } columns")
-            if (dataframe.columns)==number_of_columns:
+            logging.info(f"Number of columns in data is : {number_of_columns}")
+            logging.info(f"Dataframe has columns : {len(dataframe.columns)}")
+            if len(dataframe.columns)==number_of_columns:
                 return True
             return False
         except Exception as e:
