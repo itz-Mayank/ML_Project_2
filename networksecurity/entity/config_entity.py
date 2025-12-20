@@ -93,3 +93,20 @@ class DataValidationConfig:
         # os.makedirs(self.valid_data_dir,exist_ok=True)
         # os.makedirs(self.invalid_data_dir,exist_ok=True)
         # os.makedirs(os.path.dirname(self.drift_report_file_path),exist_ok=True)
+        
+class DataTransformationConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.data_transformation_dir = os.path.join(
+            training_pipeline_config.artifact_dir,
+            "data_transformation"
+        )
+        self.transformed_train_file_path = os.path.join(
+            self.data_transformation_dir,
+            "transformed",
+            "train.npy"
+        )
+        self.transformed_test_file_path = os.path.join(
+            self.data_transformation.data_transformation
+            "transformed",
+            "test.npy"
+        )
