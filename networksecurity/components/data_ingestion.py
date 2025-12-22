@@ -16,7 +16,6 @@ from sklearn.model_selection import train_test_split
 
 from dotenv import load_dotenv
 load_dotenv()
-n,m 0
 
 MONGO_DB_URL = os.getenv("MONGO_DB_URL")
 

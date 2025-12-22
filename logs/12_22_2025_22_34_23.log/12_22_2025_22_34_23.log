@@ -1,0 +1,23 @@
+[2025-12-22 22:34:27,698] 20 root  INFO - Initiate the Data Ingestion.
+[2025-12-22 22:34:27,698] 35 root  INFO - Exporting data from mongodb
+[2025-12-22 22:34:28,110] 37 root  INFO - Connected to Mongodb successfully
+[2025-12-22 22:34:31,975] 47 root  INFO - Data exported from Mongodb successfully
+[2025-12-22 22:34:31,979] 58 root  INFO - Exporting data into feature store
+[2025-12-22 22:34:32,082] 60 root  INFO - Data exported into feature store successfully
+[2025-12-22 22:34:32,086] 76 root  INFO - Splitting data into train and test file
+[2025-12-22 22:34:32,220] 84 root  INFO - Data split into train and test file successfully
+[2025-12-22 22:34:32,223] 22 root  INFO - Data Ingestion completed.
+[2025-12-22 22:34:32,237] 28 root  INFO - Initiate the Data Validation.
+[2025-12-22 22:34:32,368] 31 root  INFO - Number of columns in data is : 2
+[2025-12-22 22:34:32,369] 32 root  INFO - Dataframe has columns : 31
+[2025-12-22 22:34:32,369] 31 root  INFO - Number of columns in data is : 2
+[2025-12-22 22:34:32,369] 32 root  INFO - Dataframe has columns : 31
+[2025-12-22 22:34:32,661] 30 root  INFO - Data Validation completed.
+[2025-12-22 22:34:32,661] 36 root  INFO - Initiate the Data Transformation.
+[2025-12-22 22:34:32,663] 49 root  INFO - Entered initiate_data_transformation methos of DataTransformation class
+[2025-12-22 22:34:32,663] 51 root  INFO - starting data transformation
+[2025-12-22 22:34:32,781] 39 root  INFO - Entered get_data_transformer_object method of transformer class.
+[2025-12-22 22:34:32,781] 42 root  INFO - initialize KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2025-12-22 22:34:32,817] 63 root  INFO - Entering the save_object method of main utils class
+[2025-12-22 22:34:32,822] 68 root  INFO - Exiting the save_object method of main utils class
+[2025-12-22 22:34:32,824] 38 root  INFO - Data Transformation completed.

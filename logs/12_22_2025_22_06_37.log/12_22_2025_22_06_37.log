@@ -1,0 +1,18 @@
+[2025-12-22 22:06:43,445] 20 root  INFO - Initiate the Data Ingestion.
+[2025-12-22 22:06:43,445] 35 root  INFO - Exporting data from mongodb
+[2025-12-22 22:06:43,660] 37 root  INFO - Connected to Mongodb successfully
+[2025-12-22 22:06:47,627] 47 root  INFO - Data exported from Mongodb successfully
+[2025-12-22 22:06:47,632] 58 root  INFO - Exporting data into feature store
+[2025-12-22 22:06:47,737] 60 root  INFO - Data exported into feature store successfully
+[2025-12-22 22:06:47,739] 76 root  INFO - Splitting data into train and test file
+[2025-12-22 22:06:47,851] 84 root  INFO - Data split into train and test file successfully
+[2025-12-22 22:06:47,852] 22 root  INFO - Data Ingestion completed.
+[2025-12-22 22:06:47,868] 28 root  INFO - Initiate the Data Validation.
+[2025-12-22 22:06:47,996] 31 root  INFO - Number of columns in data is : 2
+[2025-12-22 22:06:47,996] 32 root  INFO - Dataframe has columns : 31
+[2025-12-22 22:06:47,996] 31 root  INFO - Number of columns in data is : 2
+[2025-12-22 22:06:47,997] 32 root  INFO - Dataframe has columns : 31
+[2025-12-22 22:06:48,324] 30 root  INFO - Data Validation completed.
+[2025-12-22 22:06:48,325] 36 root  INFO - Initiate the Data Transformation.
+[2025-12-22 22:06:48,325] 49 root  INFO - Entered initiate_data_transformation methos of DataTransformation class
+[2025-12-22 22:06:48,325] 51 root  INFO - starting data transformation
