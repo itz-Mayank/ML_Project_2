@@ -1,0 +1,28 @@
+[2025-12-24 19:56:20,897] 22 root  INFO - Initiate the Data Ingestion.
+[2025-12-24 19:56:20,898] 35 root  INFO - Exporting data from mongodb
+[2025-12-24 19:56:25,699] 37 root  INFO - Connected to Mongodb successfully
+[2025-12-24 19:56:35,184] 47 root  INFO - Data exported from Mongodb successfully
+[2025-12-24 19:56:35,186] 58 root  INFO - Exporting data into feature store
+[2025-12-24 19:56:35,297] 60 root  INFO - Data exported into feature store successfully
+[2025-12-24 19:56:35,299] 76 root  INFO - Splitting data into train and test file
+[2025-12-24 19:56:35,401] 84 root  INFO - Data split into train and test file successfully
+[2025-12-24 19:56:35,402] 24 root  INFO - Data Ingestion completed.
+[2025-12-24 19:56:35,438] 30 root  INFO - Initiate the Data Validation.
+[2025-12-24 19:56:35,533] 31 root  INFO - Number of columns in data is : 2
+[2025-12-24 19:56:35,533] 32 root  INFO - Dataframe has columns : 31
+[2025-12-24 19:56:35,533] 31 root  INFO - Number of columns in data is : 2
+[2025-12-24 19:56:35,533] 32 root  INFO - Dataframe has columns : 31
+[2025-12-24 19:56:35,790] 32 root  INFO - Data Validation completed.
+[2025-12-24 19:56:35,790] 38 root  INFO - Initiate the Data Transformation.
+[2025-12-24 19:56:35,790] 49 root  INFO - Entered initiate_data_transformation methos of DataTransformation class
+[2025-12-24 19:56:35,791] 51 root  INFO - starting data transformation
+[2025-12-24 19:56:35,895] 39 root  INFO - Entered get_data_transformer_object method of transformer class.
+[2025-12-24 19:56:35,895] 42 root  INFO - initialize KNNImputer with {'missing_values': nan, 'n_neighbors': 3, 'weights': 'uniform'}
+[2025-12-24 19:56:35,913] 64 root  INFO - Entering the save_object method of main utils class.
+[2025-12-24 19:56:35,919] 69 root  INFO - Exiting the save_object method of main utils class.
+[2025-12-24 19:56:35,920] 40 root  INFO - Data Transformation completed.
+[2025-12-24 19:56:35,920] 44 root  INFO - Model Training started.
+[2025-12-24 19:56:35,920] 37 root  INFO - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Model Trainer <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+[2025-12-24 19:56:35,920] 119 root  INFO - Loading transformed training and testing datasets
+[2025-12-24 19:56:35,953] 127 root  INFO - Splitting input and target features
+[2025-12-24 19:56:35,953] 134 root  INFO - Training the model
