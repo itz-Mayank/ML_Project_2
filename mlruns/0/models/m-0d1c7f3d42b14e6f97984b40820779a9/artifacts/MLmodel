@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/Mayank Meghwal/Desktop/Data Science/Complete-Data-Science-With-Machine-Learning-And-NLP-2024-main/24dot2-End
+  To End MLOPS Projects/Networking/mlruns/0/models/m-0d1c7f3d42b14e6f97984b40820779a9/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.0
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.8.0
+model_id: m-0d1c7f3d42b14e6f97984b40820779a9
+model_size_bytes: 13395679
+model_uuid: m-0d1c7f3d42b14e6f97984b40820779a9
+prompts: null
+run_id: 077c844e09ee44edab0748d4343656bb
+utc_time_created: '2025-12-24 17:25:57.246586'

@@ -1,6 +1,7 @@
 import sys,os
 import numpy as np
 import pandas as pd
+import mlflow
 
 # Exception and Logging
 from networksecurity.exception.exception import NetworkSecurityException
@@ -18,7 +19,7 @@ from networksecurity.utils.ml_utils.metric.classification_metric import get_clas
 from networksecurity.utils.main_utils.utils import save_object, load_object, load_numpy_array_data, evaluate_models
 
 # ML Algorithms
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import r2_score
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -37,13 +38,24 @@ class ModelTrainer:
             logging.info(f"{'>>'*20} Model Trainer {'<<'*20}")
         except Exception as e:
             raise NetworkSecurityException(e, sys) from e
+        
+    def track_mlflow(self,best_model,classificationmetric):
+        with mlflow.start_run():
+            f1_score = classificationmetric.f1_score
+            precision_score = classificationmetric.precision_score
+            recall_score = classificationmetric.recall_score
+            
+            mlflow.log_metric("f1_score",f1_score)
+            mlflow.log_metric("precision_score",precision_score)
+            mlflow.log_metric("recall_score",recall_score)
+            mlflow.sklearn.log_model(best_model,"model")
     
     def train_model(self,x_train,y_train,x_test,y_test):
         models = {
-            "Random Forest": RandomForestClassifier(verbose=1),
+            "Random Forest": RandomForestClassifier(),
             "Decision Tree": DecisionTreeClassifier(),
-            "Gradient Boosting": GradientBoostingClassifier(verbose=1),
-            "Logistic Regression" : LinearRegression(),
+            "Gradient Boosting": GradientBoostingClassifier(),
+            "Logistic Regression" : LogisticRegression(),
             "AdaBoost": AdaBoostClassifier(),
         }
         params = {
@@ -87,11 +99,12 @@ class ModelTrainer:
         classification_train_metric = get_classification_score(y_true = y_train, y_pred = y_train_pred)
         
         ## Track the experiements with mlflow
-        # self.track_mlflow(best_model,classification_train_metric)
+        self.track_mlflow(best_model,classification_train_metric)
         
         # Result of test
         y_test_pred = best_model.predict(x_test)
         classification_test_metric = get_classification_score(y_true = y_test, y_pred = y_test_pred)
+        self.track_mlflow(best_model,classification_test_metric)
         
         logging.info("Saving the trained model object")
         preprocessor = load_object(
