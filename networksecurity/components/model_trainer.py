@@ -60,7 +60,7 @@ class ModelTrainer:
         }
         params = {
             "Random Forest": {
-                'n_estimators': [8,16,32,64,128,256],
+                'n_estimators': [8,16,64,128,256],
                 # 'max_depth': [None, 10, 20],
             },
             "Decision Tree": {
@@ -68,14 +68,14 @@ class ModelTrainer:
                 # 'max_depth': [None, 10, 20],
             },
             "Gradient Boosting": {
-                'learning_rate': [0.01, 0.1, 0.5, 0.001],
-                'subsample' : [0.6,0.7,0.75,0.8,0.85,0.9],
-                'n_estimators': [8,16,32,64,128,256],   
+                'learning_rate': [0.01, 0.1, 0.001],
+                'subsample' : [0.6,0.7,0.75,0.85,0.9],
+                'n_estimators': [8,16,64,128,256],   
             },
             "Logistic Regression" : {},
             "AdaBoost": {
-                'learning_rate': [0.01, 0.1, 0.5, 0.001],
-                'n_estimators': [8,16,32,64,128,256],
+                'learning_rate': [0.01, 0.5, 0.001],
+                'n_estimators': [8,16,64,128,256],
             },
         }
         
