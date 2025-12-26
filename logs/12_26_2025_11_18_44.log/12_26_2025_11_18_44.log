@@ -1,0 +1,6 @@
+[2025-12-26 11:18:50,915] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-12-26 11:18:50,928] 107 dagshub  INFO - Accessing as itz-Mayank
+[2025-12-26 11:18:51,944] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/itz-Mayank/ML_Project_2 "HTTP/1.1 200 OK"
+[2025-12-26 11:18:53,573] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-12-26 11:18:53,577] 107 dagshub  INFO - Initialized MLflow to track repo "itz-Mayank/ML_Project_2"
+[2025-12-26 11:18:53,578] 107 dagshub  INFO - Repository itz-Mayank/ML_Project_2 initialized!

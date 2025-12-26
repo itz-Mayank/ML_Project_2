@@ -2,6 +2,9 @@ import sys,os
 import numpy as np
 import pandas as pd
 import mlflow
+import dagshub
+dagshub.init(repo_owner='itz-Mayank', repo_name='ML_Project_2', mlflow=True)
+
 
 # Exception and Logging
 from networksecurity.exception.exception import NetworkSecurityException
@@ -119,6 +122,8 @@ class ModelTrainer:
             file_path=self.model_trainer_config.trained_model_file_path,
             obj=network_model
         )
+        
+        save_object("Final_Model/model.pkl",best_model)
 
         model_trainer_artifact = ModelTrainerArtifact(
             trained_model_file_path=self.model_trainer_config.trained_model_file_path,

@@ -1,0 +1,22 @@
+[2025-12-26 11:20:09,871] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-12-26 11:20:09,885] 107 dagshub  INFO - Accessing as itz-Mayank
+[2025-12-26 11:20:10,892] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/itz-Mayank/ML_Project_2 "HTTP/1.1 200 OK"
+[2025-12-26 11:20:12,540] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-12-26 11:20:12,545] 107 dagshub  INFO - Initialized MLflow to track repo "itz-Mayank/ML_Project_2"
+[2025-12-26 11:20:12,546] 107 dagshub  INFO - Repository itz-Mayank/ML_Project_2 initialized!
+[2025-12-26 11:20:22,263] 42 root  INFO - Starting data ingestion
+[2025-12-26 11:20:22,263] 35 root  INFO - Exporting data from mongodb
+[2025-12-26 11:20:22,407] 37 root  INFO - Connected to Mongodb successfully
+[2025-12-26 11:20:26,653] 47 root  INFO - Data exported from Mongodb successfully
+[2025-12-26 11:20:26,656] 58 root  INFO - Exporting data into feature store
+[2025-12-26 11:20:26,785] 60 root  INFO - Data exported into feature store successfully
+[2025-12-26 11:20:26,788] 76 root  INFO - Splitting data into train and test file
+[2025-12-26 11:20:26,906] 84 root  INFO - Data split into train and test file successfully
+[2025-12-26 11:20:26,907] 45 root  INFO - Completed data ingestion
+[2025-12-26 11:20:26,907] 53 root  INFO - Starting data validation
+[2025-12-26 11:20:27,079] 31 root  INFO - Number of columns in data is : 2
+[2025-12-26 11:20:27,079] 32 root  INFO - Dataframe has columns : 31
+[2025-12-26 11:20:27,079] 31 root  INFO - Number of columns in data is : 2
+[2025-12-26 11:20:27,079] 32 root  INFO - Dataframe has columns : 31
+[2025-12-26 11:20:27,405] 57 root  INFO - Completed data validation
+[2025-12-26 11:20:27,405] 65 root  INFO - Starting data transformation

@@ -1,0 +1,15 @@
+[2025-12-26 10:51:19,583] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-12-26 10:51:19,595] 107 dagshub  INFO - Accessing as itz-Mayank
+[2025-12-26 10:51:20,559] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/repos/itz-Mayank/ML_Project_2 "HTTP/1.1 200 OK"
+[2025-12-26 10:51:21,523] 1025 httpx  INFO - HTTP Request: GET https://dagshub.com/api/v1/user "HTTP/1.1 200 OK"
+[2025-12-26 10:51:21,527] 107 dagshub  INFO - Initialized MLflow to track repo "itz-Mayank/ML_Project_2"
+[2025-12-26 10:51:21,529] 107 dagshub  INFO - Repository itz-Mayank/ML_Project_2 initialized!
+[2025-12-26 10:51:33,194] 42 root  INFO - Starting data ingestion
+[2025-12-26 10:51:33,195] 35 root  INFO - Exporting data from mongodb
+[2025-12-26 10:51:33,386] 37 root  INFO - Connected to Mongodb successfully
+[2025-12-26 10:51:36,434] 47 root  INFO - Data exported from Mongodb successfully
+[2025-12-26 10:51:36,437] 58 root  INFO - Exporting data into feature store
+[2025-12-26 10:51:36,554] 60 root  INFO - Data exported into feature store successfully
+[2025-12-26 10:51:36,556] 76 root  INFO - Splitting data into train and test file
+[2025-12-26 10:51:36,661] 84 root  INFO - Data split into train and test file successfully
+[2025-12-26 10:51:36,662] 45 root  INFO - Completed data ingestion
