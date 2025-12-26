@@ -109,4 +109,4 @@ jobs:
           echo "Performing final cleanup..."
           docker system prune -af --volumes || true
           docker builder prune -af || true
-          df -h
+          df -h 
