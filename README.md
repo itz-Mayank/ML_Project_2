@@ -28,53 +28,53 @@ This repository is designed so that **both recruiters and developers** can easil
 ## Project Architecture (High-Level)
 
 ```
-                                                          ┌──────────────┐
-                                                          │  Data Source │
-                                                          │  (MongoDB)   │
-                                                          └──────┬───────┘
-                                                                 │
-                                                                 ▼
-                                                        ┌────────────────────┐
-                                                        │ Data Ingestion     │
-                                                        │ - Export from DB   │
-                                                        │ - Train/Test split │
-                                                        └────────┬───────────┘
-                                                                 │
-                                                                 ▼
-                                                        ┌────────────────────┐
-                                                        │ Data Validation    │
-                                                        │ - Schema check     │
-                                                        │ - Data drift       │
-                                                        └────────┬───────────┘
-                                                                 │
-                                                                 ▼
-                                                        ┌────────────────────┐
-                                                        │ Data Transformation│
-                                                        │ - Imputation       │
-                                                        │ - Scaling          │
-                                                        │ - Feature Engg.    │
-                                                        └────────┬───────────┘
-                                                                 │
-                                                                 ▼
-                                                        ┌────────────────────┐
-                                                        │ Model Training     │
-                                                        │ - Model Factory    │
-                                                        │ - Best model       │
-                                                        └────────┬───────────┘
-                                                                 │
-                                                                 ▼
-                                                        ┌────────────────────┐
-                                                        │ Model Evaluation   │
-                                                        │ - Accuracy check   │
-                                                        │ - Model approval   │
-                                                        └────────┬───────────┘
-                                                                 │
-                                                                 ▼
-                                                        ┌────────────────────┐
-                                                        │ Deployment         │
-                                                        │ - Docker           │
-                                                        │ - AWS ECR / EC2    │
-                                                        └────────────────────┘
+                                            ┌──────────────┐
+                                            │  Data Source │
+                                            │  (MongoDB)   │
+                                            └──────┬───────┘
+                                                   │
+                                                   ▼
+                                          ┌────────────────────┐
+                                          │ Data Ingestion     │
+                                          │ - Export from DB   │
+                                          │ - Train/Test split │
+                                          └────────┬───────────┘
+                                                   │
+                                                   ▼
+                                          ┌────────────────────┐
+                                          │ Data Validation    │
+                                          │ - Schema check     │
+                                          │ - Data drift       │
+                                          └────────┬───────────┘
+                                                   │
+                                                   ▼
+                                          ┌────────────────────┐
+                                          │ Data Transformation│
+                                          │ - Imputation       │
+                                          │ - Scaling          │
+                                          │ - Feature Engg.    │
+                                          └────────┬───────────┘
+                                                   │
+                                                   ▼
+                                          ┌────────────────────┐
+                                          │ Model Training     │
+                                          │ - Model Factory    │
+                                          │ - Best model       │
+                                          └────────┬───────────┘
+                                                   │
+                                                   ▼
+                                          ┌────────────────────┐
+                                          │ Model Evaluation   │
+                                          │ - Accuracy check   │
+                                          │ - Model approval   │
+                                          └────────┬───────────┘
+                                                   │
+                                                   ▼
+                                          ┌────────────────────┐
+                                          │ Deployment         │
+                                          │ - Docker           │
+                                          │ - AWS ECR / EC2    │
+                                          └────────────────────┘
 ```
 
 ---
